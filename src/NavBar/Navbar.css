@@ -1,0 +1,20 @@
+
+.navbar {
+  background-color: rgb(138, 93, 35) !important;
+  gap: 40%;
+  
+}
+
+.navbar .container-fluid {
+ margin-left: 10%;
+
+}
+
+.navbar .nav-link {
+  color: white !important;
+  
+}
+
+.navbar .nav-link:hover {
+  color: #f39c12 !important;
+}
