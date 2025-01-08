@@ -1,0 +1,43 @@
+.container {
+  padding: 20px;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.combinations-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.combination-card {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 20px;
+  width: 45%;
+}
+
+.combination-card h2 {
+  font-size: 1.5rem;
+}
+
+.subcategories {
+  margin-top: 10px;
+}
+
+.subcategory {
+  margin-top: 10px;
+}
+
+.subcategory strong {
+  display: block;
+  margin-bottom: 5px;
+}

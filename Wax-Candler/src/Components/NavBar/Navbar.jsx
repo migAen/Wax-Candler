@@ -2,7 +2,7 @@ import './Navbar.css';
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-body-tertiary sticky-top">
+    <nav className="navbar navbar-expand-lg navbar-light bg-body-tertiary">
       <div className="container-fluid">
         <button
           className="navbar-toggler"
