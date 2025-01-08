@@ -344,5 +344,332 @@ export const fancyCombinations = [
       { family_id: 4, name: 'Woody (General)', example_notes: ['Sandalwood'] },
       { family_id: 5, name: 'Warm Amber', example_notes: ['Amber'] }
     ]
-  }
-];
+  },
+  {
+    id: 33,
+    family_ids: [1, 2],
+    name: 'Citrus Blossom Bouquet',
+    description: 'A lively fusion of Lemon, Orange Blossom, and Jasmine',
+    subcategories: [
+      { family_id: 2, name: 'Citrus', example_notes: ['Lemon', 'Orange'] },
+      { family_id: 1, name: 'Floral (General)', example_notes: ['Jasmine'] },
+    ]
+  },
+  {
+    id: 34,
+    family_ids: [1, 2],
+    name: 'Tropical Floral Medley',
+    description: 'A warm blend of Mango, Rose, and Hibiscus',
+    subcategories: [
+      { family_id: 2, name: 'Tropical Fruits', example_notes: ['Mango'] },
+      { family_id: 1, name: 'Floral (General)', example_notes: ['Rose'] },
+      { family_id: 1, name: 'Floral (General)', example_notes: ['Hibiscus'] }
+    ]
+  },
+  {
+    id: 35,
+    family_ids: [4, 5],
+    name: 'Amber Cedar Essence',
+    description: 'A smooth blend of Amber, Cedarwood, and Tonka Bean',
+    subcategories: [
+      { family_id: 4, name: 'Woody (General)', example_notes: ['Cedarwood'] },
+      { family_id: 5, name: 'Warm Amber', example_notes: ['Amber'] },
+      { family_id: 5, name: 'Warm Amber', example_notes: ['Tonka Bean'] }
+    ]
+  },
+  {
+    id: 36,
+    family_ids: [4, 5],
+    name: 'Sandalwood Amber Bliss',
+    description: 'A creamy and comforting mix of Sandalwood, Amber, and Vanilla',
+    subcategories: [
+      { family_id: 4, name: 'Woody (General)', example_notes: ['Sandalwood'] },
+      { family_id: 5, name: 'Warm Amber', example_notes: ['Amber', 'Vanilla'] }
+    ]
+  },
+  {
+    id: 37,
+    family_ids: [1, 5],
+    name: 'Amber Rose Essence',
+    description: 'A warm, floral composition of Amber and Rose',
+    subcategories: [
+      { family_id: 5, name: 'Warm Amber', example_notes: ['Amber'] },
+      { family_id: 1, name: 'Floral (General)', example_notes: ['Rose'] }
+    ]
+  },
+  {
+    id: 38,
+    family_ids: [1, 5],
+    name: 'Jasmine Amber Glow',
+    description: 'A luxurious blend of Jasmine, Amber, and Vanilla',
+    subcategories: [
+      { family_id: 1, name: 'Floral (General)', example_notes: ['Jasmine'] },
+      { family_id: 5, name: 'Warm Amber', example_notes: ['Amber', 'Vanilla'] }
+    ]
+  },
+  {
+    id: 39,
+    family_ids: [4, 11],
+    name: 'Spicy Oakwood',
+    description: 'A bold fusion of Oak, Cinnamon, and Patchouli',
+    subcategories: [
+      { family_id: 4, name: 'Woody (General)', example_notes: ['Oak'] },
+      { family_id: 11, name: 'Warm Spicy', example_notes: ['Cinnamon'] },
+      { family_id: 4, name: 'Woody (General)', example_notes: ['Patchouli'] }
+    ]
+  },
+  {
+    id: 40,
+    family_ids: [4, 11],
+    name: 'Cedarwood Spice',
+    description: 'A deep and aromatic mix of Cedarwood, Nutmeg, and Black Pepper',
+    subcategories: [
+      { family_id: 4, name: 'Woody (General)', example_notes: ['Cedarwood'] },
+      { family_id: 11, name: 'Warm Spicy', example_notes: ['Nutmeg'] },
+      { family_id: 11, name: 'Piquant Spicy', example_notes: ['Black Pepper'] }
+    ]
+  },
+  {
+    id: 41,
+    family_ids: [3, 5],
+    name: 'Caramel Amber Dream',
+    description: 'A rich blend of Caramel, Amber, and Vanilla',
+    subcategories: [
+      { family_id: 3, name: 'Gourmand', example_notes: ['Caramel'] },
+      { family_id: 5, name: 'Warm Amber', example_notes: ['Amber', 'Vanilla'] }
+    ]
+  },
+  {
+    id: 42,
+    family_ids: [3, 5],
+    name: 'Cinnamon Amber Delight',
+    description: 'A sweet and spicy blend of Cinnamon, Amber, and Tonka Bean',
+    subcategories: [
+      { family_id: 3, name: 'Spicy Oriental', example_notes: ['Cinnamon'] },
+      { family_id: 5, name: 'Warm Amber', example_notes: ['Amber'] },
+      { family_id: 5, name: 'Warm Amber', example_notes: ['Tonka Bean'] }
+    ]
+  },
+  {
+    id: 43,
+    family_ids: [9, 10],
+    name: 'Sea Breeze Meadow',
+    description: 'A fresh and breezy combination of Sea Breeze, Mint, and Fresh Grass',
+    subcategories: [
+      { family_id: 9, name: 'Aquatic', example_notes: ['Sea Breeze'] },
+      { family_id: 10, name: 'Herbaceous', example_notes: ['Mint'] },
+      { family_id: 10, name: 'Grassy', example_notes: ['Fresh Cut Grass'] }
+    ]
+  },
+  {
+    id: 44,
+    family_ids: [9, 10],
+    name: 'Oceanic Green Harmony',
+    description: 'A fresh aquatic and green blend of Saltwater, Green Leaves, and Fern',
+    subcategories: [
+      { family_id: 9, name: 'Aquatic', example_notes: ['Saltwater'] },
+      { family_id: 10, name: 'Green Fougere', example_notes: ['Green Leaves'] },
+      { family_id: 10, name: 'Green Fougere', example_notes: ['Fern'] }
+    ]
+  },
+  {
+    id: 45,
+    family_ids: [8, 4],
+    name: 'Smoky Birch Leather',
+    description: 'A smoky and earthy blend of Birch Tar, Leather, and Oakmoss',
+    subcategories: [
+      { family_id: 8, name: 'Classic Leather', example_notes: ['Leather'] },
+      { family_id: 4, name: 'Dry Woody', example_notes: ['Birch'] },
+      { family_id: 4, name: 'Woody (General)', example_notes: ['Oakmoss'] }
+    ]
+  },
+  {
+    id: 46,
+    family_ids: [8, 4],
+    name: 'Leather Cedar Essence',
+    description: 'A refined blend of Leather, Cedarwood, and Vetiver',
+    subcategories: [
+      { family_id: 8, name: 'Classic Leather', example_notes: ['Leather'] },
+      { family_id: 4, name: 'Woody (General)', example_notes: ['Cedarwood'] },
+      { family_id: 4, name: 'Woody (General)', example_notes: ['Vetiver'] }
+    ]
+  },  
+    {
+      id: 47,
+      family_ids: [1, 2],
+      name: 'Floral Citrus Bouquet',
+      description: 'A zesty yet delicate mix of Rose, Lemon, and Jasmine',
+      subcategories: [
+        { family_id: 1, name: 'Floral (General)', example_notes: ['Rose', 'Jasmine'] },
+        { family_id: 2, name: 'Citrus', example_notes: ['Lemon'] }
+      ]
+    },
+    {
+      id: 48,
+      family_ids: [2, 1],
+      name: 'Tropical Floral Medley',
+      description: 'A vibrant blend of Mango, Rose, and Tuberose',
+      subcategories: [
+        { family_id: 2, name: 'Tropical Fruits', example_notes: ['Mango'] },
+        { family_id: 1, name: 'Floral (General)', example_notes: ['Rose', 'Tuberose'] }
+      ]
+    },
+    {
+      id: 49,
+      family_ids: [4, 5],
+      name: 'Sandalwood Spice Dream',
+      description: 'A spicy and creamy fusion of Sandalwood, Cinnamon, and Vanilla',
+      subcategories: [
+        { family_id: 4, name: 'Woody (General)', example_notes: ['Sandalwood'] },
+        { family_id: 11, name: 'Warm Spicy', example_notes: ['Cinnamon'] },
+        { family_id: 5, name: 'Warm Amber', example_notes: ['Vanilla'] }
+      ]
+    },
+    {
+      id: 50,
+      family_ids: [4, 5],
+      name: 'Amber Rose Bloom',
+      description: 'A soothing and floral blend of Amber and Rose with a touch of Tonka Bean',
+      subcategories: [
+        { family_id: 5, name: 'Warm Amber', example_notes: ['Amber'] },
+        { family_id: 1, name: 'Floral (General)', example_notes: ['Rose'] },
+        { family_id: 5, name: 'Warm Amber', example_notes: ['Tonka Bean'] }
+      ]
+    },
+    {
+      id: 51,
+      family_ids: [3, 11],
+      name: 'Cinnamon Spice Amber',
+      description: 'A rich and warming blend of Cinnamon, Amber, and Tonka Bean',
+      subcategories: [
+        { family_id: 3, name: 'Spicy Oriental', example_notes: ['Cinnamon'] },
+        { family_id: 5, name: 'Warm Amber', example_notes: ['Amber', 'Tonka Bean'] }
+      ]
+    },
+    {
+      id: 52,
+      family_ids: [2, 10],
+      name: 'Green Citrus Breeze',
+      description: 'A fresh and citrusy mix of Lime, Mint, and Fresh Grass',
+      subcategories: [
+        { family_id: 2, name: 'Citrus', example_notes: ['Lime'] },
+        { family_id: 10, name: 'Herbaceous', example_notes: ['Mint'] },
+        { family_id: 10, name: 'Grassy', example_notes: ['Fresh Cut Grass'] }
+      ]
+    },
+    {
+      id: 53,
+      family_ids: [3, 5],
+      name: 'Caramel Amber Delight',
+      description: 'A sweet and decadent combination of Caramel, Amber, and Vanilla',
+      subcategories: [
+        { family_id: 3, name: 'Gourmand', example_notes: ['Caramel'] },
+        { family_id: 5, name: 'Warm Amber', example_notes: ['Amber', 'Vanilla'] }
+      ]
+    },
+    {
+      id: 54,
+      family_ids: [4, 8],
+      name: 'Birch Leather Wood',
+      description: 'A rugged mix of Birch Tar, Leather, and Oakmoss',
+      subcategories: [
+        { family_id: 8, name: 'Classic Leather', example_notes: ['Leather'] },
+        { family_id: 4, name: 'Dry Woody', example_notes: ['Birch'] },
+        { family_id: 4, name: 'Woody (General)', example_notes: ['Oakmoss'] }
+      ]
+    },
+    {
+      id: 55,
+      family_ids: [9, 10],
+      name: 'Oceanic Green Escape',
+      description: 'A refreshing aquatic and green blend of Sea Breeze, Pine, and Fern',
+      subcategories: [
+        { family_id: 9, name: 'Aquatic', example_notes: ['Sea Breeze'] },
+        { family_id: 10, name: 'Woody Green', example_notes: ['Pine'] },
+        { family_id: 10, name: 'Green Fougere', example_notes: ['Fern'] }
+      ]
+    },
+    {
+      id: 56,
+      family_ids: [7, 4],
+      name: 'Woody Chypre',
+      description: 'A complex and earthy blend of Oakmoss, Vetiver, and Patchouli',
+      subcategories: [
+        { family_id: 7, name: 'Woody Chypre', example_notes: ['Vetiver', 'Oakmoss'] },
+        { family_id: 4, name: 'Woody (General)', example_notes: ['Patchouli'] }
+      ]
+    },
+    {
+      id: 57,
+      family_ids: [2, 10],
+      name: 'Fruity Green Serenity',
+      description: 'A fresh and tangy fusion of Peach, Tomato Leaf, and Green Leaves',
+      subcategories: [
+        { family_id: 2, name: 'Stone Fruits', example_notes: ['Peach'] },
+        { family_id: 10, name: 'Vegetal', example_notes: ['Tomato Leaf'] },
+        { family_id: 10, name: 'Green Fougere', example_notes: ['Green Leaves'] }
+      ]
+    },
+    {
+      id: 58,
+      family_ids: [12, 4],
+      name: 'Powdery Woody Breeze',
+      description: 'A delicate yet earthy mix of Iris, Violet, and Vetiver',
+      subcategories: [
+        { family_id: 12, name: 'Powdery', example_notes: ['Iris', 'Violet'] },
+        { family_id: 4, name: 'Woody (General)', example_notes: ['Vetiver'] }
+      ]
+    },
+    {
+      id: 59,
+      family_ids: [3, 4],
+      name: 'Gourmand Woods',
+      description: 'A sweet yet grounded blend of Vanilla, Tonka Bean, and Cedarwood',
+      subcategories: [
+        { family_id: 3, name: 'Gourmand', example_notes: ['Vanilla', 'Tonka Bean'] },
+        { family_id: 4, name: 'Woody (General)', example_notes: ['Cedarwood'] }
+      ]
+    },
+    {
+      id: 60,
+      family_ids: [8, 11],
+      name: 'Tobacco Leather Spice',
+      description: 'A smoky and spicy combination of Tobacco, Leather, and Black Pepper',
+      subcategories: [
+        { family_id: 8, name: 'Tobacco Leather', example_notes: ['Tobacco', 'Leather'] },
+        { family_id: 11, name: 'Piquant Spicy', example_notes: ['Black Pepper'] }
+      ]
+    },
+    {
+      id: 61,
+      family_ids: [12, 13],
+      name: 'Balsamic Powdery Harmony',
+      description: 'A smooth fusion of Benzoin, Tonka Bean, and Iris',
+      subcategories: [
+        { family_id: 13, name: 'Sweet Balsamic', example_notes: ['Benzoin', 'Tonka Bean'] },
+        { family_id: 12, name: 'Powdery', example_notes: ['Iris'] }
+      ]
+    },
+    {
+      id: 62,
+      family_ids: [6, 13],
+      name: 'Spicy Balsamic Fusion',
+      description: 'A deep and aromatic blend of Cinnamon, Myrrh, and Patchouli',
+      subcategories: [
+        { family_id: 11, name: 'Warm Spicy', example_notes: ['Cinnamon'] },
+        { family_id: 13, name: 'Resinous Balsamic', example_notes: ['Myrrh'] },
+        { family_id: 4, name: 'Woody (General)', example_notes: ['Patchouli'] }
+      ]
+    },
+    {
+      id: 63,
+      family_ids: [1, 10],
+      name: 'Floral Green Breeze',
+      description: 'A fresh and vibrant fusion of Muguet, Freesia, and Fresh Grass',
+      subcategories: [
+        { family_id: 1, name: 'Green Floral', example_notes: ['Muguet', 'Freesia'] },
+        { family_id: 10, name: 'Grassy', example_notes: ['Fresh Cut Grass'] }
+      ]
+    }
+  ];
+  
