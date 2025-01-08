@@ -43,7 +43,7 @@ const FraganceCombinations = () => {
           <div className="mb-4">
             <input
               type="text"
-              placeholder="Search by example notes..."
+              placeholder="🧪 Search by fragances you have to see possible combinations 🧪"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="search-bar"
@@ -52,7 +52,7 @@ const FraganceCombinations = () => {
           <div className="row justify-content-center">
             {filteredCombinations.map(combination => (
               <div key={combination.id} className="col-md-4 col-lg-3 col-xl-3 mb-4">
-                <div className="card shadow-lg border-0 rounded-4 combination-card">
+                <div className="card border-0 rounded-4 combination-card">
                   <div className="card-body p-4">
                     <h3 className="card-title">{combination.name}</h3>
                     <p className="card-text">{combination.description}</p>
