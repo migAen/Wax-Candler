@@ -4,7 +4,6 @@ import { fraganceSubcategories } from '../../data/fraganceSubcategories';
 import { fancyCombinations } from '../../data/fancyCombinations';
 import './FraganceCombinations.css';
 
-// Combine family data with subcategories
 const familyMap = families.reduce((acc, family) => {
   acc[family.id] = {
     name: family.name,
@@ -13,13 +12,13 @@ const familyMap = families.reduce((acc, family) => {
   return acc;
 }, {});
 
-// Enrich combinations with family and subcategory data
 const enrichedCombinations = fancyCombinations.map(combination => {
-  const enrichedSubcategories = combination.family_ids.map(familyId => {
-    const family = familyMap[familyId];
+  const enrichedSubcategories = combination.subcategories.map(subcategory => {
+    const family = familyMap[subcategory.family_id];
     return family ? {
       familyName: family.name,
-      subcategories: family.subcategories.map(subcategory => subcategory.name),
+      subcategoryName: subcategory.name,
+      exampleNotes: subcategory.example_notes,
     } : null;
   }).filter(family => family !== null);
 
@@ -29,53 +28,53 @@ const enrichedCombinations = fancyCombinations.map(combination => {
 const FraganceCombinations = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
-  // Filtering combinations based on search term
-  const filteredCombinations = enrichedCombinations.filter(combination => 
-    combination.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredCombinations = enrichedCombinations.filter(combination => {
+    const allExampleNotes = combination.enrichedSubcategories
+      .map(subcategory => subcategory.exampleNotes.join(' '))
+      .join(' ');
 
-  console.log('FraganceCombinations component rendered!');
-  console.log('Filtered Combinations:', filteredCombinations);
+    return allExampleNotes.toLowerCase().includes(searchTerm.toLowerCase());
+  });
 
   return (
-    <div className="container">
-      <h1>Fragrance Combinations</h1>
-
-      {/* Search functionality */}
-      <input 
-        type="text" 
-        placeholder="Search combinations..." 
-        value={searchTerm} 
-        onChange={(e) => setSearchTerm(e.target.value)} 
-        className="search-bar"
-      />
-
-      {/* Displaying combinations or a default message if none are found */}
-      {filteredCombinations.length === 0 ? (
-        <p>No combinations found</p>
-      ) : (
-        <div className="combinations-list" style={{ border: '2px solid red' }}>
-          {filteredCombinations.map(combination => (
-            <div key={combination.id} className="combination-card">
-              <h2>{combination.name}</h2>
-              <p>{combination.description}</p>
-
-              <div className="subcategories">
-                {combination.enrichedSubcategories.map((family, idx) => (
-                  <div key={idx} className="subcategory">
-                    <strong>{family.familyName}:</strong>
-                    <ul>
-                      {family.subcategories.map((subcategory, index) => (
-                        <li key={index}>{subcategory}</li>
+    <div className="container my-5">
+      <div className="row justify-content-center">
+        <div className="col-12 scrollable-container">
+          <div className="mb-4">
+            <input
+              type="text"
+              placeholder="Search by example notes..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="search-bar"
+            />
+          </div>
+          <div className="row justify-content-center">
+            {filteredCombinations.map(combination => (
+              <div key={combination.id} className="col-md-4 col-lg-3 col-xl-3 mb-4">
+                <div className="card shadow-lg border-0 rounded-4 combination-card">
+                  <div className="card-body p-4">
+                    <h3 className="card-title">{combination.name}</h3>
+                    <p className="card-text">{combination.description}</p>
+                    <div className="subcategories">
+                      {combination.enrichedSubcategories.map((family, idx) => (
+                        <div key={idx} className="subcategory">
+                          <strong>{family.familyName} - {family.subcategoryName}:</strong>
+                          <ul>
+                            {family.exampleNotes.map((note, index) => (
+                              <li key={index}>{note}</li>
+                            ))}
+                          </ul>
+                        </div>
                       ))}
-                    </ul>
+                    </div>
                   </div>
-                ))}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      )}
+      </div>
     </div>
   );
 };

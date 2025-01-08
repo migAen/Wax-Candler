@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 function Navbar() {
@@ -15,35 +16,35 @@ function Navbar() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <a className="navbar-brand" href="/">
+        <Link className="navbar-brand" to="/">
           <img
             src="/Logo-Row-NoB.png" 
             alt="Logo"
-            style={{ height: '100px'}}
+            style={{ height: '100px' }}
           />
-        </a>       
+        </Link>       
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/CandleCreator">Candle Creator</a>
+              <Link className="nav-link active" to="/CandleCreator">Candle Creator</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/Ideas">Ideas</a>
+              <Link className="nav-link" to="/Ideas">Ideas</Link>
             </li>
             <li className="nav-item dropdown">
-              <a
+              <Link
                 className="nav-link dropdown-toggle"
-                href="#"
+                to="#"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 Calculator
-              </a>
+              </Link>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="/Wax">Wax</a></li>
-                <li><a className="dropdown-item" href="/Fragance">Fragance</a></li>                
-                <li><a className="dropdown-item" href="/Color">Color</a></li>
+                <li><Link className="dropdown-item" to="/Wax">Wax</Link></li>
+                <li><Link className="dropdown-item" to="/Fragance">Fragrance</Link></li>                
+                <li><Link className="dropdown-item" to="/Color">Color</Link></li>
               </ul>
             </li>
           </ul>

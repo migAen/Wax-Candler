@@ -1,43 +1,71 @@
-.container {
+.scrollable-container {
+  max-height: 80vh;
+  overflow-y: auto;
+  padding-right: 15px;
+  scrollbar-width: none;  
+}
+
+.scrollable-container::-webkit-scrollbar {
+  display: none;
+}
+
+.combination-card {
+  background-color: rgb(160, 194, 186) !important;
   padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  height: 100%;  
+}
+
+.card-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.card ul {
+  font-size: 1.1rem;
+  padding-left: 1.5rem;
+}
+
+.card a.btn {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+}
+
+.combination-card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+.subcategory ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.subcategory li {
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .search-bar {
   width: 100%;
   padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  background-color: rgb(230, 229, 202);
+  border: 1px solid rgb(116, 104, 86);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
-.combinations-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-.combination-card {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 20px;
-  width: 45%;
-}
-
-.combination-card h2 {
-  font-size: 1.5rem;
-}
-
-.subcategories {
-  margin-top: 10px;
-}
-
-.subcategory {
-  margin-top: 10px;
-}
-
-.subcategory strong {
-  display: block;
-  margin-bottom: 5px;
+.search-bar:focus {
+  outline: none;
+  border-color: rgb(85, 76, 60);
 }
