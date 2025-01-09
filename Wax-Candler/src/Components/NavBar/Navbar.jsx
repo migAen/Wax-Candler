@@ -1,10 +1,10 @@
-import { Link } from 'react-router-dom';
-import './Navbar.css';
+import { Link } from "react-router-dom";
+import "./Navbar.css";
 
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-body-tertiary">
-      <div className="container-fluid">
+      <div className="container-fluid d-flex justify-content-center">
         <button
           className="navbar-toggler"
           type="button"
@@ -17,19 +17,14 @@ function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <Link className="navbar-brand" to="/">
-          <img
-            src="/Logo-Row-NoB.png" 
-            alt="Logo"
-            style={{ height: '100px' }}
-          />
-        </Link>       
+          <img src="/Logo-Row-NoB.png" alt="Logo" style={{ height: "100px" }} />
+        </Link>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" to="/CandleCreator">Candle Creator</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/Ideas">Ideas</Link>
+              <Link className="nav-link active" to="/CandleCreator">
+                Candle Creator
+              </Link>
             </li>
             <li className="nav-item dropdown">
               <Link
@@ -39,13 +34,40 @@ function Navbar() {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Calculator
+                Materials
               </Link>
               <ul className="dropdown-menu">
-                <li><Link className="dropdown-item" to="/Wax">Wax</Link></li>
-                <li><Link className="dropdown-item" to="/Fragance">Fragrance</Link></li>                
-                <li><Link className="dropdown-item" to="/Color">Color</Link></li>
+                <li>
+                  <Link className="dropdown-item" to="/Wax">
+                    Waxes
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/Fragance">
+                    Fragrances
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/Color">
+                    Colorants
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/Equipment">
+                    Equipment
+                  </Link>
+                </li>
               </ul>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/Ideas">
+                Ideas
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link active" to="/PremadeFragances">
+                Premade Fragrances
+              </Link>
             </li>
           </ul>
         </div>
