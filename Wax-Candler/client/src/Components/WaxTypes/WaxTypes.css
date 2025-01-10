@@ -1,0 +1,76 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.waxes-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.waxes-card {
+  background-color: rgb(250, 235, 215);
+  color: rgb(66, 44, 30);
+  width: 100%;
+  max-width: 100vh;
+  height: auto;
+  max-height: 80vh;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.waxes-card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.waxes-card-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.waxes-card-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.scrollable-container {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: 15px;
+  scrollbar-width: none;
+  overflow-wrap: break-word;
+}
+
+.scrollable-container::-webkit-scrollbar {
+  display: none;
+}
+
+.waxes-type {
+  margin-bottom: 30px;
+}
+
+.waxes-type-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.waxes-type-text {
+  font-size: 1.1rem;
+}
+
+.waxes-type-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-top: 10px;
+}
