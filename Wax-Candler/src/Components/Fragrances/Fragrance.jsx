@@ -9,15 +9,15 @@ function Fragrance() {
         <div className="fragrance-card-body">
           <h2 className="fragrance-card-title text-center mb-4">Fragrance Families and Subcategories</h2>
           <div className="table-container">
-            <table className="table table-striped">
+            <table className="table">            
               <thead>
                 <tr>
-                  <th>Family</th>
-                  <th>Subcategory</th>
-                  <th>Fragrances</th>
+                  <th className="table-active">Family</th>
+                  <th className="table-active">Subcategory</th>
+                  <th className="table-active">Fragrances</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody className="table-group-divider">
                 {families.map((family) => (
                   fraganceSubcategories.filter(subcategory => subcategory.family_id === family.id)
                     .map((subcategory) => (
