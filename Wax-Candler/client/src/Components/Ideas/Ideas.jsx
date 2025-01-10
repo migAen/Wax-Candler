@@ -3,8 +3,8 @@
 function Ideas() {
   return (
     <div className="container">
-      <h1>Ideas Page</h1>
-      <p>Explore new candle-making ideas and inspiration.</p>
+      
+      <p>Here will go like a blog or msg funct for people to add their own creations</p>
     </div>
   );
 }

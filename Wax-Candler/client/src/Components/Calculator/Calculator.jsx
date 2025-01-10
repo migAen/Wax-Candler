@@ -2,6 +2,8 @@ import { useState } from "react";
 import Steps from "../Steps/Steps";
 import FragranceSelector from "../FragranceSelector/FragranceSelector";
 
+//UseContext and Create Context with reducers here to make it step by step process.
+
 const CandleCalculator = () => {
   const [volume, setVolume] = useState("");
   const [fragrancePercentage, setFragrancePercentage] = useState(8);
