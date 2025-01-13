@@ -9,7 +9,8 @@ import Colorants from "./Components/Colorants/Colorants";
 import Equipment from "./Components/Equipment/Equipment";
 import Fragrance from "./Components/Fragrances/Fragrance";
 import CandleCalculator from "./Components/Calculator/Calculator";
-import Ideas from "./Components/Ideas/Ideas";
+// import Ideas from "./Components/Ideas/Ideas";
+import ColorMixer from "./Components/ColorMixer/ColorMixer";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/CandleCreator" element={<CandleCalculator />} />
-        <Route path="/Ideas" element={<Ideas />} />
+        <Route path="/Ideas" element={<ColorMixer />} />
         <Route path="/Wax" element={<WaxTypes />} />
         <Route path="/Fragance" element={<Fragrance />} />
         <Route path="/Color" element={<Colorants />} />        

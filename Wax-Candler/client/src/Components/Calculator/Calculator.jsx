@@ -1,106 +1,97 @@
 import { useState } from "react";
 import Steps from "../Steps/Steps";
 import FragranceSelector from "../FragranceSelector/FragranceSelector";
+import ColorMixer from "../ColorMixer/ColorMixer";
+import Quantities from "../Quantities/Quantities";
+import "./Calculator.css";
+const CandleCalculatorApp = () => {
+  const [step, setStep] = useState(1);
+  const [candleData, setCandleData] = useState({});
+  const [selectedFragrance, setSelectedFragrance] = useState([]);
+  const [mixedColor, setMixedColor] = useState({ r: 255, g: 247, b: 196 });
 
-//UseContext and Create Context with reducers here to make it step by step process.
-
-const CandleCalculator = () => {
-  const [volume, setVolume] = useState("");
-  const [fragrancePercentage, setFragrancePercentage] = useState(8);
-  const [fragranceResult, setFragranceResult] = useState(null);
-  const [waxResult, setWaxResult] = useState(null);
-  const [waxGramsResult, setWaxGramsResult] = useState(null);
-
-  const calculate = () => {
-    const volumeNumeric = parseFloat(volume);
-    if (isNaN(volumeNumeric) || volumeNumeric <= 0) {
-      alert("Please enter a valid volume.");
-      return;
+  const handleNextStep = () => {
+    if (step < 4) {
+      setStep(step + 1);
     }
-
-    const fragranceMl = (volumeNumeric * fragrancePercentage) / 100;
-    const waxMl = (volumeNumeric * (100 - fragrancePercentage)) / 100;
-    const waxGrams = waxMl * 0.9;
-
-    setFragranceResult(fragranceMl);
-    setWaxResult(waxMl);
-    setWaxGramsResult(waxGrams);
   };
 
-  return (
-    <div
-      className="container mt-5"
-      style={{
-        maxWidth: "500px",
-        margin: "0 auto",
-        overflowY: "auto",
-        height: "100vh",
-      }}
-    >
-      <Steps />
+  const handlePrevStep = () => {
+    if (step > 1) {
+      setStep(step - 1);
+    }
+  };
 
+  const handleCalculate = (data) => {
+    setCandleData(data);
+  };
+
+  const handleFragranceSelect = (fragrance) => {
+    setSelectedFragrance(fragrance);
+  };
+
+  const handleColorMix = (color) => {
+    setMixedColor(color);
+  };
+
+  const rgbToCss = (rgb) => `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`;
+
+  return (
+    <div className="container mt-5" style={{ maxWidth: "700px", margin: "0 auto", overflowY: "auto" }}>
+      <Steps currentStep={step} />
       <div className="card p-4 shadow-sm mt-4">
-        <h2 className="card-title text-center">Candle Calculator</h2>
+        <h2 className="card-title text-center">
+          {step === 1
+            ? "Candle Calculator"
+            : step === 2
+            ? "Fragrance Selector"
+            : step === 3
+            ? "Color Mixer"
+            : "Summary"}
+        </h2>
         <div className="card-body">
-          <div className="mb-3">
-            <label className="form-label">
-              Specify the volume of your container (ml)
-            </label>
-            <input
-              type="number"
-              placeholder="Example: '250' "
-              className="form-control"
-              value={volume}
-              onChange={(e) => setVolume(e.target.value)}
-            />
-          </div>
-          <div className="mb-3">
-            <label className="form-label">Fragrance Percentage</label>
-            <select
-              className="form-select"
-              value={fragrancePercentage}
-              onChange={(e) => setFragrancePercentage(Number(e.target.value))}
-            >
-              <option value={7}>7%</option>
-              <option value={8}>8%</option>
-              <option value={9}>9%</option>
-              <option value={10}>10%</option>
-            </select>
-          </div>
-          <button className="btn btn-primary w-100" onClick={calculate}>
-            Calculate
-          </button>
-          {fragranceResult !== null && (
-            <div className="mt-4">
-              <h4>Results:</h4>
-              <p>
-                <strong>Fragrance:</strong> {fragranceResult.toFixed(2)} ml (or
-                grams)
-              </p>
-              <p>
-                <strong>Wax:</strong> {waxResult.toFixed(2)} ml
-              </p>
-              <p>
-                <strong>Wax in grams:</strong> {waxGramsResult.toFixed(2)} g
-              </p>
-              <p className="text-secondary">
-                (Just a reminder to check the wick provider&apos;s guidelines
-                for the best size recommendation based on your container and wax
-                type)
-              </p>
+          {step === 1 && <Quantities onCalculate={handleCalculate} />}
+          {step === 2 && <FragranceSelector onSelect={handleFragranceSelect} />}
+          {step === 3 && <ColorMixer onMixColor={handleColorMix} />}
+          {step === 4 && (
+            <div>
+              <h4>Summary of Your Candle:</h4>
+              <p><strong>Volume:</strong> {candleData.volume} ml</p>
+              <p><strong>Fragrance Percentage:</strong> {candleData.fragrancePercentage}%</p>
+              <p><strong>Fragrance Amount:</strong> {candleData.fragranceMl ? candleData.fragranceMl.toFixed(2) : "N/A"} ml</p>
+              <p><strong>Wax Amount:</strong> {candleData.waxMl ? candleData.waxMl.toFixed(2) : "N/A"} ml</p>
+              <p><strong>Wax in grams:</strong> {candleData.waxGrams ? candleData.waxGrams.toFixed(2) : "N/A"} g</p>
+              <p><strong>Selected Fragrance Notes:</strong> {selectedFragrance.length > 0 ? selectedFragrance.join(", ") : "None"}</p>
+              <p><strong>Selected Color:</strong></p>
+              <div
+                style={{
+                  width: "100px",
+                  height: "100px",
+                  backgroundColor: rgbToCss(mixedColor),
+                  borderRadius: "8px",
+                  margin: "10px 0"
+                }}
+              ></div>
+              <p>{`rgb(${mixedColor.r}, ${mixedColor.g}, ${mixedColor.b})`}</p>
             </div>
           )}
-        </div>
-      </div>
 
-      <div className="mt-5">
-        <div className="card p-4 shadow-sm">
-          <h2 className="card-title text-center">Select Fragrance Notes</h2>
-          <FragranceSelector />
+          <div className="mt-4">
+            {step > 1 && (
+              <button className="btn btn-secondary me-3" onClick={handlePrevStep}>
+                Previous
+              </button>
+            )}
+            {step < 4 && (
+              <button className="btn btn-primary" onClick={handleNextStep}>
+                Next
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default CandleCalculator;
+export default CandleCalculatorApp;
