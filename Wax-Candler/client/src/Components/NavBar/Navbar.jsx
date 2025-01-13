@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
+//Generates the cards and the navbar with bootstrap/edited to my preferences.
+
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-body-tertiary">

@@ -27,17 +27,25 @@ const CandleCalculator = () => {
     setWaxGramsResult(waxGrams);
   };
 
-  
-
   return (
-    <div className="container mt-5" style={{ maxWidth: "500px", margin: "0 auto", overflowY: "auto", height: "100vh" }}>
+    <div
+      className="container mt-5"
+      style={{
+        maxWidth: "500px",
+        margin: "0 auto",
+        overflowY: "auto",
+        height: "100vh",
+      }}
+    >
       <Steps />
-      
+
       <div className="card p-4 shadow-sm mt-4">
         <h2 className="card-title text-center">Candle Calculator</h2>
         <div className="card-body">
           <div className="mb-3">
-            <label className="form-label">Specify the volume of your container (ml)</label>
+            <label className="form-label">
+              Specify the volume of your container (ml)
+            </label>
             <input
               type="number"
               placeholder="Example: '250' "
@@ -65,18 +73,26 @@ const CandleCalculator = () => {
           {fragranceResult !== null && (
             <div className="mt-4">
               <h4>Results:</h4>
-              <p><strong>Fragrance:</strong> {fragranceResult.toFixed(2)} ml/gr</p>
-              <p><strong>Wax:</strong> {waxResult.toFixed(2)} ml</p>
-              <p><strong>Wax in grams:</strong> {waxGramsResult.toFixed(2)} g</p>
+              <p>
+                <strong>Fragrance:</strong> {fragranceResult.toFixed(2)} ml (or
+                grams)
+              </p>
+              <p>
+                <strong>Wax:</strong> {waxResult.toFixed(2)} ml
+              </p>
+              <p>
+                <strong>Wax in grams:</strong> {waxGramsResult.toFixed(2)} g
+              </p>
               <p className="text-secondary">
-                (Just a reminder to check the wick provider&apos;s guidelines for the
-                best size recommendation based on your container and wax type)
+                (Just a reminder to check the wick provider&apos;s guidelines
+                for the best size recommendation based on your container and wax
+                type)
               </p>
             </div>
           )}
         </div>
       </div>
-      
+
       <div className="mt-5">
         <div className="card p-4 shadow-sm">
           <h2 className="card-title text-center">Select Fragrance Notes</h2>

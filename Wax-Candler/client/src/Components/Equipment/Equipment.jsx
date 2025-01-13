@@ -7,7 +7,7 @@ function Equipment() {
         <div className="equipment-card-body">
           <h2 className="equipment-card-title text-center mb-4">Essential Equipment for Candle Making</h2>
           <p className="equipment-card-text">
-            To make candles, you’ll need a few key pieces of equipment to ensure the process is smooth and safe. Here are the most essential tools:
+            To make candles, you&apos;ll need a few key pieces of equipment to ensure the process is smooth and safe. Here are the most essential tools:
           </p>
           
           <div className="equipment-scrollable-container">
