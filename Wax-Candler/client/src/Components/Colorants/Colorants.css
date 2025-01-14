@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
   height: 100%;
   margin: 0;
 }
@@ -11,8 +12,14 @@ body, html {
 }
 
 .colorants-card {
-  background: rgb(226,219,214);
-  background: radial-gradient(circle, rgba(226,219,214,1) 0%, rgba(245,238,229,1) 82%, rgba(255,235,219,1) 100%, rgba(245,184,135,1) 100%);
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgb(226, 214, 221) 0%,
+    rgba(245, 238, 229, 1) 82%,
+    rgba(255, 235, 219, 1) 100%,
+    rgba(245, 184, 135, 1) 100%
+  );
   color: rgb(85, 66, 50);
   width: 100%;
   max-width: 800px;
@@ -56,17 +63,30 @@ body, html {
   display: none;
 }
 
-.colorants-type {
-  margin-bottom: 30px;
+.colorants-type-card {
+  background-color: rgba(185, 207, 190, 0.591);
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.colorants-type-card:hover {
+  transform: translateY(-5px);
 }
 
 .colorants-type-title {
   font-size: 1.5rem;
   font-weight: bold;
+  margin-bottom: 10px;
+  color: #2c3e50;
 }
 
 .colorants-type-text {
   font-size: 1.1rem;
+  margin-top: 10px;
+  color: #151414;
 }
 
 .colorants-type-img {
@@ -74,4 +94,10 @@ body, html {
   height: 150px;
   object-fit: cover;
   margin-top: 10px;
+  border-radius: 8px;
+}
+
+.colorants-type-card img {
+  display: block;
+  margin: 10px auto;
 }

@@ -14,7 +14,7 @@ body, html {
   background-color: rgb(250, 235, 215);
   color: rgb(66, 44, 30);
   width: 100%;
-  max-width: 100vh;
+  max-width: 800px;
   height: auto;
   max-height: 80vh;
   overflow: hidden;
@@ -29,7 +29,6 @@ body, html {
   display: flex;
   flex-direction: column;
   height: 100%;
-  overflow: hidden;
 }
 
 .waxes-card-title {
@@ -43,7 +42,7 @@ body, html {
   line-height: 1.6;
 }
 
-.scrollable-container {
+.waxes-scrollable-container {
   max-height: 70vh;
   overflow-y: auto;
   padding-right: 15px;
@@ -51,21 +50,34 @@ body, html {
   overflow-wrap: break-word;
 }
 
-.scrollable-container::-webkit-scrollbar {
+.waxes-scrollable-container::-webkit-scrollbar {
   display: none;
 }
 
-.waxes-type {
-  margin-bottom: 30px;
+.waxes-type-card {
+  background-color: rgb(237, 228, 239);
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.waxes-type-card:hover {
+  transform: translateY(-5px);
 }
 
 .waxes-type-title {
   font-size: 1.5rem;
   font-weight: bold;
+  margin-bottom: 10px;
+  color: #2c3e50;
 }
 
 .waxes-type-text {
   font-size: 1.1rem;
+  margin-top: 10px;
+  color: #151414;
 }
 
 .waxes-type-img {
@@ -73,4 +85,10 @@ body, html {
   height: 150px;
   object-fit: cover;
   margin-top: 10px;
+  border-radius: 8px;
+}
+
+.waxes-type-card img {
+  display: block;
+  margin: 10px auto;
 }

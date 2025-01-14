@@ -8,9 +8,13 @@ const mixColors = (color1, color2, ratio) => {
   return { r, g, b };
 };
 
-const ColorMixer = ({ onMixColor }) => {
+const ColorMixer = ({ onMixColor, onUpdateDrops }) => {
   const [currentColor, setCurrentColor] = useState({ r: 255, g: 247, b: 196 });
-  const [selectedColor, setSelectedColor] = useState({ r: 255, g: 247, b: 196 });
+  const [selectedColor, setSelectedColor] = useState({
+    r: 255,
+    g: 247,
+    b: 196,
+  });
   const [drops, setDrops] = useState(0);
 
   const solidColors = [
@@ -27,6 +31,7 @@ const ColorMixer = ({ onMixColor }) => {
     setCurrentColor(mixedColor);
     setDrops(drops + 1);
     onMixColor(mixedColor);
+    onUpdateDrops(drops + 1);
   };
 
   const handleColorSelect = (color) => {
@@ -60,9 +65,12 @@ const ColorMixer = ({ onMixColor }) => {
               cursor: "pointer",
               display: "inline-block",
               margin: "0 10px",
-              border: selectedColor.r === color.r && selectedColor.g === color.g && selectedColor.b === color.b 
-                ? "5px solid #fff" 
-                : "none",
+              border:
+                selectedColor.r === color.r &&
+                selectedColor.g === color.g &&
+                selectedColor.b === color.b
+                  ? "5px solid #fff"
+                  : "none",
             }}
             onClick={() => handleColorSelect(color)}
           ></div>
