@@ -60,12 +60,7 @@ function Navbar() {
                   </Link>
                 </li>
               </ul>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/Ideas">
-                Ideas
-              </Link>
-            </li>
+            </li>           
             <li className="nav-item">
               <Link className="nav-link active" to="/PremadeFragances">
                 Premade Fragrances
