@@ -10,6 +10,8 @@ import Equipment from "./Components/Equipment/Equipment";
 import Fragrance from "./Components/Fragrances/Fragrance";
 import CandleCalculator from "./Components/Calculator/Calculator";
 import PageNotFound from "./Components/PageNotFound/PageNotFound";
+import TechCard from "./Components/Technologies/Technologies";
+import Start from "./Components/Starting/Starting";
 
 function App() {
   return (
@@ -24,6 +26,9 @@ function App() {
         <Route path="/Equipment" element={<Equipment />} />
         <Route path="/PremadeFragances" element={<FraganceCombinations />} />
         <Route path="*" element={<PageNotFound />} />
+        <Route path="/Tech" element={<TechCard />} />
+        <Route path="/Start" element={<Start />} />
+
       </Routes>
     </div>
   );
