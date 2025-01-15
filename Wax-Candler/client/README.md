@@ -16,7 +16,6 @@ Wax Candler is a web-based application designed for creating custom wax candles.
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Project Structure](#project-structure)
 - [Dependencies](#dependencies)
 - [Contributing](#contributing)
 
